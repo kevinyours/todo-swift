@@ -77,3 +77,31 @@ struct BaseFriend {
 
 var myBF = BaseFriend(name: "Ian")
 myBF.changeName(newName: "Paul")
+
+
+var myNumberSet : Set<Int> = Set<Int>()
+
+myNumberSet.insert(1)
+myNumberSet.insert(2)
+myNumberSet.insert(2)
+myNumberSet.insert(3)
+myNumberSet.insert(3)
+
+myNumberSet.count
+
+for aNumber in myNumberSet {
+    print("aNumber: ", aNumber)
+}
+
+var myJustPeople: [String] = ["주영", "수영", "보영"]
+myJustPeople.contains("수영")
+
+var myCompanies : Set<String> = ["철수", "영희", "수지"]
+myCompanies.contains("철수")
+
+if let indexToRemove = myCompanies.firstIndex(of: "수지"){
+    print("indexToRemove: ", indexToRemove)
+    myCompanies.remove(at: indexToRemove)
+}
+
+print(myCompanies)
